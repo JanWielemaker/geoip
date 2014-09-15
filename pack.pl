@@ -1,5 +1,5 @@
 name(geoip).
-version('1.0').
+version('0.9.0').
 title('Access GeoIP library').
 keywords([geoip, location, http]).
 author( 'Jan Wielemaker', 'jan@swi-prolog.org' ).
