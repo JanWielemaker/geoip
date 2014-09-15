@@ -20,3 +20,22 @@ default installed in =/usr/share/GeoIP=.  A simple usage is:
 	    netmask:16,
 	    region:'07'}.
   ```
+
+## Installation
+
+*WARNING* This installation will only work   on a machine where libgeoip
+can be installed in a globally searched   place  and where C development
+tools are provided.
+
+  1. Install GeoIP library and database.  The command for Ubuntu 14.04
+     is below.
+
+      ```{sh}
+      sudo apt-get install geoip-database-contrib libgeoip-dev
+      ```
+
+  2. Install the pack
+
+      ```{prolog}
+      ?- pack_install(geopip).
+      ```
