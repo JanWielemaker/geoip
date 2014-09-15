@@ -1,7 +1,16 @@
-all:	geoip4pl.so
+SOBJ=   $(PACKSODIR)/geoip4pl.$(SOEXT)
 
-geoip4pl.so: geoip4pl.c
-	swipl-ld -Wall -shared -o geoip4pl geoip4pl.c -lGeoIP
+all:    $(SOBJ)
 
+OBJ=	c/geoip4pl.o
+
+$(SOBJ): $(OBJ)
+	mkdir -p $(PACKSODIR)
+	$(LD) $(LDSOFLAGS) -o $@ $(OBJ) $(SWISOLIB) -lGeoIP
+
+check::
+install::
 clean:
-	rm -f geoip4pl.so
+	rm -f $(OBJ)
+distclean: clean
+	rm -f $(SOBJ)

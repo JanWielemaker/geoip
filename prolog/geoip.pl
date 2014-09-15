@@ -36,7 +36,7 @@
 	    geoip_lookup/3			% +Handle, +From, -Result
 	  ]).
 :- use_module(library(apply)).
-:- use_foreign_library(geoip4pl).
+:- use_foreign_library(foreign(geoip4pl)).
 
 :- multifile user:file_search_path/2.
 
