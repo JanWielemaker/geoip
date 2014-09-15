@@ -296,6 +296,6 @@ install_geoip4pl(void)
   FUNCTOR_pair2 = PL_new_functor(PL_new_atom("-"), 2);
 
   PL_register_foreign("geoip_open",    3, geoip_open,   0);
-  PL_register_foreign("geoip_close",   1, geoip_close,  0);
+  PL_register_foreign("geoip_close_",  1, geoip_close,  0);
   PL_register_foreign("geoip_lookup_", 3, geoip_lookup, 0);
 }
